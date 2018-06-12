@@ -6,7 +6,7 @@ var StoreHours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2p
 
 //an array of store names
 
-var allOfTheStores = [firstandPike, seaTac, seattleCenter, capitolHill, alki]
+var allOfTheStores = [firstandPike, seaTac, seattleCenter, capitolHill, alki];
 
 // a list of object literals that represent each store
 
@@ -15,7 +15,7 @@ var firstandPike = {
   maxCust: 65,
   avgCookiesSold: 6.3,
   getRandomInt: function(min, max) {
-    return Math.floor(Math.random() * (max - min)) + min
+    return Math.floor(Math.random() * (max - min)) + min;
   },
 };
 
@@ -32,7 +32,7 @@ var seaTac = {
   maxCust: 24,
   avgCookiesSold: 1.2,
   getRandomInt: function(min, max) {
-    return Math.floor(Math.random() * (max - min)) + min
+    return Math.floor(Math.random() * (max - min)) + min;
   },
 };
 
@@ -43,7 +43,7 @@ var seattleCenter = {
   maxCust: 38,
   avgCookiesSold: 3.7,
   getRandomInt: function(min, max) {
-    return Math.floor(Math.random() * (max - min)) + min
+    return Math.floor(Math.random() * (max - min)) + min;
   },
 };
 
@@ -54,7 +54,7 @@ var capitolHill = {
   maxCust: 38,
   avgCookiesSold: 2.3,
   getRandomInt: function(min, max) {
-    return Math.floor(Math.random() * (max - min)) + min
+    return Math.floor(Math.random() * (max - min)) + min;
   },
 };
 
@@ -66,8 +66,8 @@ var alki = {
   maxCust: 16,
   avgCookiesSold: 4.6,
   getRandomInt: function(min, max) {
-    return Math.floor(Math.random() * (max - min)) + min
+    return Math.floor(Math.random() * (max - min)) + min;
   },
 };
 
-var alkiSalesSim = alki.getRandomInt(alki.minCust, alki.maxCust); 
+var alkiSalesSim = alki.getRandomInt(alki.minCust, alki.maxCust);
