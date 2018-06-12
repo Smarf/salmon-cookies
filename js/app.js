@@ -18,11 +18,14 @@ var firstandPike = {
     return Math.floor(Math.random() * (max - min)) + min
   },
 };
+
 // I couldn't get the "cookietest" function to work inside of the object, even when I used "this.getRandomInt" but it works outside of the firstandPike object so that's why it's there
-var firstandPikeSaleSim = firstandPike.getRandomInt(firstandPike.minCust,firstandPike.maxCust)
-  console.log(firstandPikeSaleSim)
 
+var firstandPikeSaleSim = firstandPike.getRandomInt(firstandPike.minCust,firstandPike.maxCust);
 
+console.log(firstandPikeSaleSim);
+
+// console.log(firstandPikeSaleSim) proof it worked
 
 var seaTac = {
   minCust: 3,
@@ -31,8 +34,9 @@ var seaTac = {
   getRandomInt: function(min, max) {
     return Math.floor(Math.random() * (max - min)) + min
   },
-   
 };
+
+var seaTacSaleSim = seaTac.getRandomInt(seaTac.minCust, seaTac.maxCust);
 
 var seattleCenter = {
   minCust: 11,
@@ -43,6 +47,8 @@ var seattleCenter = {
   },
 };
 
+var seattleCentersalesSim = seattleCenter.getRandomInt(seattleCenter.minCust, seattleCenter.maxCust);
+
 var capitolHill = {
   minCust: 20,
   maxCust: 38,
@@ -52,6 +58,9 @@ var capitolHill = {
   },
 };
 
+var capitolHillsalesSim = capitolHill.getRandomInt(capitolHill.minCust, capitolHill.maxCust);
+
+
 var alki = {
   minCust: 2,
   maxCust: 16,
@@ -60,3 +69,5 @@ var alki = {
     return Math.floor(Math.random() * (max - min)) + min
   },
 };
+
+var alkiSalesSim = alki.getRandomInt(alki.minCust, alki.maxCust); 
