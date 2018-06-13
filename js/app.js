@@ -14,18 +14,39 @@ var firstandPike = {
   minCust: 23,
   maxCust: 65,
   avgCookiesSold: 6.3,
-  getRandomInt: function(min, max) {
-    return Math.floor(Math.random() * (max - min)) + min;
+  firstandPikeSaleSim: function() {
+    return Math.floor(Math.random() * (this.maxCust - this.minCust) + this.minCust);
+  },
+  averagePerHour: function() {
+    return this.firstandPikeSaleSim() * this.avgCookiesSold;
+  },
+
+  generateList: function() {
+    var ulEl = document.getElementById('firstandPike');
+    var runningTotal = 0;
+
+    for(var i = 0; i < StoreHours.length; i++) {
+
+      // this creates the list elements
+      var liEl = document.createElement('li');
+
+      // this populates the list 
+      liEl.textContent = this.averagePerHour();
+      
+      // append it to the DOM
+      ulEl.appendChild(liEl);
+    }
   },
 };
 
-// I couldn't get the "cookietest" function to work inside of the object, even when I used "this.getRandomInt" but it works outside of the firstandPike object so that's why it's there
+
+/* I couldn't get the "cookietest" function to work inside of the object, even when I used "this.getRandomInt" but it works outside of the firstandPike object so that's why it's there
 
 var firstandPikeSaleSim = firstandPike.getRandomInt(firstandPike.minCust,firstandPike.maxCust);
 
 console.log(firstandPikeSaleSim);
 
-// console.log(firstandPikeSaleSim) proof it worked
+ console.log(firstandPikeSaleSim) proof it worked */
 
 var seaTac = {
   minCust: 3,
