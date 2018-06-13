@@ -2,7 +2,7 @@
 
 // variable to store an array of store hours for all stores
 
-var StoreHours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
+var storeHours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
 
 //an array of store names
 
@@ -12,10 +12,10 @@ var allOfTheStores = [firstandPike, seaTac, seattleCenter, capitolHill, alki];
 
 function SalmonCookieStores (name, storeHours, minCust, maxCust, avgCookiesSold) {
   this.name = name;
-  this.storeHours = allOfTheStores;
-  this.minCust: minCust;
-  this.maxCust: maxCust;
-  this.avgCookiesSold: avgCookiesSold;
+  this.storeHours = storeHours;
+  this.minCust = 0;
+  this.maxCust = 0;
+  this.avgCookiesSold = avgCookiesSold;
   this.salesSim = function() {
     return Math.floor(Math.random() * (this.maxCust - this.minCust) + this.minCust);
   };
@@ -24,11 +24,13 @@ function SalmonCookieStores (name, storeHours, minCust, maxCust, avgCookiesSold)
   };
 }
 
-var firstandPike = new SalmonCookieStores ('firstandPike', storeHours, 23, 65, 6.3);
-var seaTac = new SalmonCookieStores ('seaTac', storeHours, 3, 24, 1.2,);
-var seattleCenter = SalmonCookieStores ('seattleCenter', storeHours, 11, 38, 3.7);
-var capitolHill =  SalmonCookieStores ('capitolHill', storeHours, 20, 38, 2.3);
-var alki = SalmonCookieStores ('alki', storeHours, 2, 16, 4.6);
+var firstandPike = new SalmonCookieStores('firstandPike', storeHours, 23, 65, 6.3);
+var seaTac = new SalmonCookieStores('seaTac', storeHours, 3, 24, 1.2);
+var seattleCenter = SalmonCookieStores('seattleCenter', storeHours, 11, 38, 3.7);
+var capitolHill =  SalmonCookieStores('capitolHill', storeHours, 20, 38, 2.3);
+var alki = SalmonCookieStores('alki', storeHours, 2, 16, 4.6);
+
+console.log('check if the Sales Sim function is working on the firstandPike object',SalmonCookieStores.salesSim(firstandPike.minCust,firstandPike.maxCust));
 
 // // SalmonCookieStores.name = [firstandPike, seaTac, seattleCenter, capitolHill, alki];
 
@@ -55,9 +57,9 @@ var alki = SalmonCookieStores ('alki', storeHours, 2, 16, 4.6);
 //       // this creates the list elements
 //       var liEl = document.createElement('li');
 
-//       // this populates the list 
+//       // this populates the list
 //       liEl.textContent = this.averagePerHour();
-      
+
 //       // append it to the DOM
 //       ulEl.appendChild(liEl);
 //     }
