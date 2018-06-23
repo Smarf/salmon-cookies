@@ -18,11 +18,12 @@ var firstandPike = {
     for (var i = 0; i < storeHours.length; i++) {
       this.customersPerHour.push(Math.floor(Math.random() * (this.maxCust - this.minCust) + this.minCust));
     }
-  },
-  averagePerHour: function() {
-    return this.salesSimulator() * this.avgCookiesSold;
+  // averagePerHour: function() {
+  //   firstandPike.customersPerHour * this.avgCookiesSold;
+  // }
   }
 };
+
 
 var seaTac = {
   minCust: 3,
@@ -85,27 +86,27 @@ var alki = {
 };
 
 firstandPike.salesSimulator();
-seaTac.salesSimulator();
-seattleCenter.salesSimulator();
-capitolHill.salesSimulator();
-alki.salesSimulator();
+// seaTac.salesSimulator();
+// seattleCenter.salesSimulator();
+// capitolHill.salesSimulator();
+// alki.salesSimulator();
 
 
-function generateList() {
-  var ulEl = document.getElementById('firstandPike');
-  var liEl = document.createElement('li');
+// function generateList() {
+//   var ulEl = document.getElementById('firstandPike');
+//   var liEl = document.createElement('li');
 
-  for(var i = 0; i < storeHours.length; i++) {
-    liEl = document.createElement('li');
+//   for(var i = 0; i < storeHours.length; i++) {
+//     liEl = document.createElement('li');
 
-    // this creates the list elements  
-    // this populates the list
+//     // this creates the list elements  
+//     // this populates the list
 
-    liEl.textContent = firstandPike.customersPerHour[i];
+//     liEl.textContent = firstandPike.customersPerHour[i];
 
-    // append it to the DOM
-    ulEl.appendChild(liEl);
-  }
-}
+//     // append it to the DOM
+//     ulEl.appendChild(liEl);
+//   }
+// }
 
-generateList();
+// generateList();
