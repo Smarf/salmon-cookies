@@ -119,3 +119,5 @@ console.log('check if the Sales Sim function is working on the firstandPike obje
 // };
 
 // var alkiSalesSim = alki.getRandomInt(alki.minCust, alki.maxCust);
+
+
