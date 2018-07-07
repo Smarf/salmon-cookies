@@ -18,6 +18,12 @@ h1 {
   margin-top: 20px;
 }
 
+h2 {
+  font-size: 14px;
+  font-weight: 200; 
+  color: rgb(127, 189, 12);
+}
+
 .header-inner {
   width: 960px;
   margin: 0 auto;
