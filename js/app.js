@@ -6,6 +6,7 @@ var storeHours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2p
 
 
 var firstandPike = {
+  name: 'First and Pike Store',
   minCust: 23,
   maxCust: 65,
   avgCookiesSold: 6.3,
@@ -14,6 +15,7 @@ var firstandPike = {
 
 
 var seaTac = {
+  name: 'SeaTac Store',
   minCust: 3,
   maxCust: 24,
   avgCookiesSold: 1.2,
@@ -22,6 +24,7 @@ var seaTac = {
 };
 
 var seattleCenter = {
+  name: 'Seattle Center Store',
   minCust: 11,
   maxCust: 38,
   avgCookiesSold: 3.7,
@@ -30,6 +33,7 @@ var seattleCenter = {
 };
 
 var capitolHill = {
+  name: 'Capitol Hill Store',
   minCust: 20,
   maxCust: 38,
   avgCookiesSold: 2.3,
@@ -38,6 +42,7 @@ var capitolHill = {
 };
 
 var alki = {
+  name: 'Alki Store',
   minCust: 2,
   maxCust: 16,
   avgCookiesSold: 4.6,
@@ -48,23 +53,22 @@ var alki = {
 
 var allOfTheStores = [firstandPike, seaTac, seattleCenter, capitolHill, alki];
 
-//     // this creates the list elements  
+//     // this creates the list elements
 //     // this populates the list
 
 function generateList() {
   var ulEl = document.getElementById('firstandPike');
   var liEl = document.createElement('li');
+  liEl.textContent = allOfTheStores[0];
+  ulEl.appendChild(liEl);
+  liEl.textContent = allOfTheStores[1];
+  ulEl.appendChild(liEl);
+  liEl.textContent = allOfTheStores[2];
+  ulEl.appendChild(liEl);
+  liEl.textContent = allOfTheStores[3];
+  ulEl.appendChild(liEl);
+  liEl.textContent = allOfTheStores[4];
+  ulEl.appendChild(liEl);
+}
 
-  for(var i = 0; i < storeHours.length; i++) {
-    liEl = document.createElement('li');
-
-
-
-//     liEl.textContent = firstandPike.customersPerHour[i];
-
-//     // append it to the DOM
-//     ulEl.appendChild(liEl);
-//   }
-// }
-
-// generateList();
+generateList();
