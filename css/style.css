@@ -18,8 +18,9 @@ h1 {
   border: 2px dotted green;
 }
 
-#firstPike {
+.store {
   font-size: 18px;
   text-align: left;
   border: 2px dotted green;
+  margin: 10px;
 }

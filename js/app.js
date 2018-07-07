@@ -11,6 +11,13 @@ var firstandPike = {
   maxCust: 65,
   avgCookiesSold: 6.3,
   hoursOpen: storeHours,
+  // function renderInfo() {
+  //   var ulEl = document.getElementById('firstandPike');
+  //   for (var i = 0; i < 5; i++) {
+  //     var liEl = document.createElement('li');
+  //     liEl.textContent =
+  //   }
+  // }
 };
 
 
@@ -56,14 +63,91 @@ var allOfTheStores = [firstandPike, seaTac, seattleCenter, capitolHill, alki];
 //     // this creates the list elements
 //     // this populates the list
 
-function generateList() {
-  var ulEl = document.getElementById('storeInformation');
-
-  for (var i = 0; i < allOfTheStores.length; i++) {
-    var liEl = document.createElement('li');
-    liEl.textContent = allOfTheStores[i].name;
-    ulEl.appendChild(liEl);
-  }
+function generatefirstandPike() {
+  var ulEl = document.getElementById('firstandPike');
+  var liEl1 = document.createElement('li');
+  var liEl2 = document.createElement('li');
+  var liEl3 = document.createElement('li');
+  var liEl4 = document.createElement('li');
+  liEl1.textContent = 'Minimum Customers Per Hour: ' + firstandPike.minCust;
+  ulEl.appendChild(liEl1);
+  liEl2.textContent = 'Maximum Customers Per Hour: ' + firstandPike.maxCust;
+  ulEl.appendChild(liEl2);
+  liEl3.textContent = 'Average Cookies Sold: ' + firstandPike.avgCookiesSold;
+  ulEl.appendChild(liEl3);
+  liEl4.textContent = 'Store Hours: ' + firstandPike.hoursOpen;
+  ulEl.appendChild(liEl4);
 }
 
-generateList();
+function generateseaTac() {
+  var ulEl = document.getElementById('seaTac');
+  var liEl1 = document.createElement('li');
+  var liEl2 = document.createElement('li');
+  var liEl3 = document.createElement('li');
+  var liEl4 = document.createElement('li');
+  liEl1.textContent = 'Minimum Customers Per Hour: ' + seaTac.minCust;
+  ulEl.appendChild(liEl1);
+  liEl2.textContent = 'Maximum Customers Per Hour: ' + seaTac.maxCust;
+  ulEl.appendChild(liEl2);
+  liEl3.textContent = 'Average Cookies Sold: ' + seaTac.avgCookiesSold;
+  ulEl.appendChild(liEl3);
+  liEl4.textContent = 'Store Hours: ' + seaTac.hoursOpen;
+  ulEl.appendChild(liEl4);
+}
+
+
+function generateseattleCenter() {
+  var ulEl = document.getElementById('seattleCenter');
+  var liEl1 = document.createElement('li');
+  var liEl2 = document.createElement('li');
+  var liEl3 = document.createElement('li');
+  var liEl4 = document.createElement('li');
+  liEl1.textContent = 'Minimum Customers Per Hour: ' + seattleCenter.minCust;
+  ulEl.appendChild(liEl1);
+  liEl2.textContent = 'Maximum Customers Per Hour: ' + seattleCenter.maxCust;
+  ulEl.appendChild(liEl2);
+  liEl3.textContent = 'Average Cookies Sold: ' + seattleCenter.avgCookiesSold;
+  ulEl.appendChild(liEl3);
+  liEl4.textContent = 'Store Hours: ' + seattleCenter.hoursOpen;
+  ulEl.appendChild(liEl4);
+}
+
+
+function generatecapitolHill() {
+  var ulEl = document.getElementById('capitolHill');
+  var liEl1 = document.createElement('li');
+  var liEl2 = document.createElement('li');
+  var liEl3 = document.createElement('li');
+  var liEl4 = document.createElement('li');
+  liEl1.textContent = 'Minimum Customers Per Hour: ' + capitolHill.minCust;
+  ulEl.appendChild(liEl1);
+  liEl2.textContent = 'Maximum Customers Per Hour: ' + capitolHill.maxCust;
+  ulEl.appendChild(liEl2);
+  liEl3.textContent = 'Average Cookies Sold: ' + capitolHill.avgCookiesSold;
+  ulEl.appendChild(liEl3);
+  liEl4.textContent = 'Store Hours: ' + capitolHill.hoursOpen;
+  ulEl.appendChild(liEl4);
+}
+
+
+function generatealki() {
+  var ulEl = document.getElementById('alki');
+  var liEl1 = document.createElement('li');
+  var liEl2 = document.createElement('li');
+  var liEl3 = document.createElement('li');
+  var liEl4 = document.createElement('li');
+  liEl1.textContent = 'Minimum Customers Per Hour: ' + alki.minCust;
+  ulEl.appendChild(liEl1);
+  liEl2.textContent = 'Maximum Customers Per Hour: ' + alki.maxCust;
+  ulEl.appendChild(liEl2);
+  liEl3.textContent = 'Average Cookies Sold: ' + alki.avgCookiesSold;
+  ulEl.appendChild(liEl3);
+  liEl4.textContent = 'Store Hours: ' + alki.hoursOpen;
+  ulEl.appendChild(liEl4);
+}
+
+generatefirstandPike();
+generateseaTac();
+generateseattleCenter();
+generatecapitolHill();
+generatealki();
