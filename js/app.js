@@ -63,8 +63,6 @@ function generateList() {
     var liEl = document.createElement('li');
     liEl.textContent = allOfTheStores[i].name;
     ulEl.appendChild(liEl);
-    liEl.textContent = allOfTheStores[i].minCust;
-    ulEl.appendChild(liEl);
   }
 }
 
