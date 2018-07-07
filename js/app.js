@@ -57,18 +57,15 @@ var allOfTheStores = [firstandPike, seaTac, seattleCenter, capitolHill, alki];
 //     // this populates the list
 
 function generateList() {
-  var ulEl = document.getElementById('firstandPike');
-  var liEl = document.createElement('li');
-  liEl.textContent = allOfTheStores[0];
-  ulEl.appendChild(liEl);
-  liEl.textContent = allOfTheStores[1];
-  ulEl.appendChild(liEl);
-  liEl.textContent = allOfTheStores[2];
-  ulEl.appendChild(liEl);
-  liEl.textContent = allOfTheStores[3];
-  ulEl.appendChild(liEl);
-  liEl.textContent = allOfTheStores[4];
-  ulEl.appendChild(liEl);
+  var ulEl = document.getElementById('storeInformation');
+
+  for (var i = 0; i < allOfTheStores.length; i++) {
+    var liEl = document.createElement('li');
+    liEl.textContent = allOfTheStores[i].name;
+    ulEl.appendChild(liEl);
+    liEl.textContent = allOfTheStores[i].minCust;
+    ulEl.appendChild(liEl);
+  }
 }
 
 generateList();
